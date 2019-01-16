@@ -1,0 +1,22 @@
+{
+  "name": "pupet-responsive-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run e2e -- --exit",
+    "e2e": "PORT=3002 ./node_modules/mocha/bin/mocha --recursive --timeout 5000", 
+    "test:dev": "npm run e2e -- --watch",
+    "start:dev": "PORT=3000 nodemon ./server/index.js --ignore ./test",
+    "dev": "npm run start:dev & npm run test:dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0",
+    "puppeteer": "^1.11.0"
+  }
+}
